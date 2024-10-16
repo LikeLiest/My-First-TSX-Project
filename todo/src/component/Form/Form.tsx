@@ -1,7 +1,11 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import style from "./Form.module.scss";
 
-export const Form = ({ addTodo }) => {
+type TypeAddTodo = {
+  addTodo: (newItem: string) => void;
+};
+
+export const Form: React.FC<TypeAddTodo> = ({ addTodo }) => {
   const [newItem, setNewItem] = useState("HELLO TSX");
 
   function handleSubmit(event: FormEvent) {

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import style from './List.module.scss'
 
 type TypeListProps = {
   todos: {
@@ -19,7 +20,7 @@ export const List: React.FC<TypeListProps> = ({ todos, handleDelete }) => {
   }, [todos]);
 
   return (
-    <ul ref={ref}>
+    <ul className={style.list} ref={ref}>
       {todos.map((todo) => (
         <li key={todo.id}>
           {todo.item}

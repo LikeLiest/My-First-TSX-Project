@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form } from "./component/Form";
+import { Form } from "./component/Form/Form";
 import { List } from "./component/List/List";
 
 type TypeTodos = {
@@ -23,8 +23,8 @@ function App() {
 
   return (
     <>
-      <Form addTodo={addTodo} />
       <h1>Todo List</h1>
+      <Form addTodo={addTodo} />
       <List todos={todos} handleDelete={handleDelete} />
     </>
   );
